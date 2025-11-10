@@ -1,9 +1,9 @@
 ### Docker and Docker Compose
-...............
+---------
 
 ## Docker
 
-..........
+---------
 
 It is a platform for Building, Running and Managing Containers.
 
