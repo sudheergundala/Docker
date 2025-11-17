@@ -14,6 +14,8 @@ It is a lightweight, portable, isolated and self sufficient software package tha
 
 ## Docker Architecture
 
+![Docker Architecture](image.png)
+
 
 Docker CLI ---> DockerD ----> ContainerD ---> Containerd-shim ----> runc
 
@@ -54,20 +56,6 @@ runc:-
 
 ## Cgroups:-
    
-
-### control flow:-
-
-docker CLI
-   ↓ REST API
-dockerd
-   ↓ gRPC
-containerd
-   ↓ spawn shim
-containerd-shim
-   ↓ exec runc
-runc
-   ↓ Linux kernel syscalls (clone, setns, cgroups)
-   └──> container process (PID 1)
 
 
 
