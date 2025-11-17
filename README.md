@@ -12,6 +12,8 @@ It is a lightweight, portable, isolated and self sufficient software package tha
 
 ## Virtual Machine(VM) vs Container
 
+![VirtualMachine vs Containers](VMvsContainer.png)
+
 ## Docker Architecture
 
 ![Docker Architecture](image.png)
