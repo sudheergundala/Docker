@@ -77,7 +77,7 @@ CMD  ---> To set the default command to execute when the container run. if we pr
 ENTRYPOINT ----> when we provide the arguments during the docker run the values get appended to Entrypoint and run in the container. if no values are provided then it will take CMD values as the default. Entrypoint is fixed.To change/override the Entrypoint we need to use --entrypoint.
 
 ## Tips to write the better Dockerfile
-# To Optimize the docker layer caching we always need to follow the below order.
+   To Optimize the docker layer caching we always need to follow the below order.
 # System setup -- OS level dependencies.
      # base image setup
      # updating and installing the system level config
