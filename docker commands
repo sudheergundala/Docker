@@ -1,0 +1,73 @@
+## Most Usefull Docker Commands
+
+docker version   --- To know the version of docker(both client and Server).
+
+docker ps
+
+docker ps -a
+
+docker images
+
+docker run <image_name>
+
+docker stop <containerid/name>
+
+docker start <containerid/name>
+
+docker restart <containerid/name>
+
+docker rm <containerid/name>
+
+docker rmi <imagename/id>
+
+docker pull <image_name>
+
+docker run ubuntu sleep 100
+
+docker exec <container_name> <command>
+
+docker run -d <image_name>
+
+docker attach <container_name/id>
+
+docker run -it <image_name> bash / docker exec -it <container_name> bash
+
+docker ps --filter/-f status=exited
+
+docker ps --format "{{.ID}}:{{.Image}}"
+
+docker run -d --name webapp nginx
+
+docker logs <container_name>
+
+docker save -o <target> <image_name>
+
+docker load -i <target>
+
+docker inspect <image_name>
+
+docker build -t <name:tag> -f <full/path/to/Dockerfile> <build-context-path>
+
+docker stats <container_ID/Name>. --- it shows the CPU and memory usage of the container.
+
+docker history <image>  -- it shows the image layers like when it is created and what is size etc
+
+docker diff <container_ID/Name>  -- it shows the difference made to the writable layer of the container.
+
+docker logs <container_ID/Name>
+
+docker run -p <docker-host_port>:<docker-container_port> <image>
+
+docker run -v <docker-host_volume>:<docker-container_volume> <image>
+
+docker volume create <name_of_volume>
+
+docker volume inspect <name_of_volume>
+
+docker run --rm -v app-data:/data ubuntu cat /data/file.txt ------- This command wil create the container and mount the volume provided and read the content from the text file given and exit. Once the continer exits it will be removed automatically(--rm).
+
+docker network create <network-name>
+
+docker run --net <network-name> <image-name> -- this will assign the continer to specified network. If the network is not specified then it will auotmatically assigned to defult bridge network.
+
+docker network connect <network-name> <container-name> --- to connect the running container to a network.
