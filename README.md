@@ -203,7 +203,6 @@ When you run the docker compose yaml file it will create  the single network for
 # Sample Docker compose yaml file
 
 docker-compose.yml
-  
   services:
     <name of the service>:
          image: <name of the image>
