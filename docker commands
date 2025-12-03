@@ -58,6 +58,8 @@ docker logs <container_ID/Name>
 
 docker run -p <docker-host_port>:<docker-container_port> <image>
 
+docker run -e <key>:<value> <image> ---- to define the environment variables we will use -e parameter.
+
 docker run -v <docker-host_volume>:<docker-container_volume> <image>
 
 docker volume create <name_of_volume>
@@ -71,3 +73,28 @@ docker network create <network-name>
 docker run --net <network-name> <image-name> -- this will assign the continer to specified network. If the network is not specified then it will auotmatically assigned to defult bridge network.
 
 docker network connect <network-name> <container-name> --- to connect the running container to a network.
+
+docker network rm <network name>
+
+## Docker Compose:
+
+docker compose up
+
+docker compose down
+
+docker compose start
+
+docker compose stop
+
+docker compose ls
+
+docker compose logs
+
+dockercompose -p/--project-name <name with which you want> start
+
+docker compose ps
+
+docker compose up --scale <service>=<number to scale>
+
+docker compose down -v  ---- Using the -v option we will remove the volumes attached to it.
+

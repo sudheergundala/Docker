@@ -193,6 +193,48 @@ Docker networks :
 Note: For Production, always use user-defined bridge network for better isolation, automatic DNS and fully controlled subnets and gateways.
 
 
+### DOCKER COMPOSE
+------------------
+
+Docker compose is a orchestration tool that allows to run the multiple docker containers using a single yaml file.
+
+When you run the docker compose yaml file it will create  the single network for all the docker containers/services mentioned in the yaml file. So they can be communicated with each other through names.
+
+# Sample Docker compose yaml file
+  
+  services:
+    <name of the service>:
+         image: <name of the image>
+         environment:
+           <key>: <value>
+         ports:
+           - "<value>:<value>"
+         volumes:
+           - <location on host>:<location on container>
+         healthcheck:
+           test: [required URL/cmd and exit code]
+           interval: <x>
+           timeout: <x>
+           retries: <x>
+           start_period: <x>
+         networks:
+           - <network name>
+    
+    <name of the other service>:
+         build: .
+         environment:
+           <key>: <value>
+         depends_on:
+           <service name>:
+              condition: service_healthy
+
+   networks:
+     <network name>:
+
+   volumes:
+     <location host>:
+
+
 
 
 
