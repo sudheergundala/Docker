@@ -201,6 +201,8 @@ Docker compose is a orchestration tool that allows to run the multiple docker co
 When you run the docker compose yaml file it will create  the single network for all the docker containers/services mentioned in the yaml file. So they can be communicated with each other through names.
 
 # Sample Docker compose yaml file
+
+docker-compose.yml
   
   services:
     <name of the service>:
